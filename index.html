@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wecome MSD fan</title>
+    
+</head>
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    background-color: rgb(228, 213, 80);
+    
+ }
+ .t1{
+    margin-left: 42%;
+    margin-top: 8%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+ }
+ p{
+    margin-left: 43%;
+    margin-top: 5%;
+    font-size: 20px;
+ }
+ .inp{
+    margin-left: 20%;
+    margin-top :1%;
+    width: 60%;
+    height: 60px;
+    font-size: 150%;
+    background: transparent;
+    color: rgb(4, 8, 245);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border-color: blue;
+    border-width: 10px;
+    text-align: center;
+ }
+ .submit{
+    margin-left: 40%;
+    /* margin-top :5%; */
+    width: 10%;
+    font-size: 150%;
+    background-color: blue;
+    color: rgb(247, 247, 247);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border-color: blue;
+    border-width: 10px;
+ }
+ .clr{
+    margin-left: 2%;
+    /* margin-bottom :10px; */
+    width: 10%;
+    font-size: 150%;
+    background-color: blue;
+    color: rgb(247, 247, 247);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    border-color: blue;
+    border-width: 10px;
+ }
+ .for_prints{
+   margin-left: 0%;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 40px;
+    /* background: rgb(30, 83, 226); */
+    color: rgb(255, 238, 6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    /* border-radius: 10px; */
+    margin-bottom: 1%;
+    /* border-color: blue; */
+    /* border-width: 10px; */
+   
+ }
+ .csk {
+    margin-left: 40%;
+    margin-top: 2%;
+ }
+ .divop{
+    margin-top: 3%;
+    border: 3px solid rgb(9, 33, 252);
+    background-color: blue;
+ }
+ 
+</style>
+<body>
+    
+    <h1 class="t1">Welcome MSD Fan</h1>
+    <img class="csk" src="2.png" alt="">
+    <img class = "thala" src="3.png" alt="">
+
+    
+
+    <form action="psot">
+        <input class = "inp" type="text" id = 'input' placeholder="enter any value you want eg: name, number" >
+        <br>
+        <br>
+        <input class= "submit" type="button" value="submit" onclick="values()">
+        <input class= "clr" type="reset" value="clear" onclick="clears()">
+
+        <div class="divop"> <p class="for_prints" id = "demo"></p></div>
+        
+    </form>
+
+    <div class="footer" style="background-color: rgb(0, 0, 0); height: 300px; margin-top: 0%;">
+        <p style="margin-left: 46%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px; color: white; margin-bottom: 1%; margin-top: 2%;">like And Share </p>
+        
+        <a href="#"> <img style="width: 60px; height: 60px; margin-left: 43%;" class= "share" src="shareicon.png" alt="shareicon"> </a>
+       
+        <a href="#"> <img  style="width: 60px; height: 60px;margin-left: 6%;" class= "like" src="lovelike.png" alt="lovelikeicon"> </a> 
+        <p style="margin-left: 46%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px; color: white; margin-top: 10px;">Follow Me </p>
+        <a href="https://www.instagram.com/utkarsh.karale?igshid=OGQ5ZDc2ODk2ZA=="> <img  style="width: 55px; height: 55px; margin-left: 43%; margin-top: 1%;" class= "insta" src="insta.png" alt="insta"> </a>
+        <a href="https://www.linkedin.com/in/utkarshkarale/"> <img  style="width: 60px; height: 60px; margin-left: 6%;" class= "linkdin" src="linkdin.png" alt="insta"> </a>
+        
+        <p style="margin-left: 43%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px; color: white; margin-bottom: 1%; margin-top: 2%;">Developer - Utkarsh Karale </p>
+     
+           
+
+
+
+    </div>
+
+
+
+    <script>
+        function values ()
+        {
+            var x = document.getElementById('input').value
+            
+            
+            var inputs = document.getElementById('input').disabled=true;
+            
+           
+            inputs.disabled="true";
+
+            
+            no = parseInt(x,10)
+            var is = isNaN(no);
+            if(is == true)
+            {
+                // console.log("it is nan",no)
+                // consider x
+
+                if(x.length == 7)
+                {
+                    console.log("thala for reason...!")
+                    var audio = new Audio('music.mp3');
+                    audio.play();
+                    document.getElementsByClassName('for_prints').innerHtml = "THALA FOR REASON"
+                    
+                    
+                    var exp = ''
+                    for(let a in x)
+                    {
+                        exp += x[a] + '+'
+                    }
+                    console.log(exp)
+                    op = exp.slice(0,13)
+                    op += ' = ' + 7 
+                    console.log(op)
+
+                    document.getElementById('demo').innerHTML=`THALA FOR REASON => ${op}`
+
+
+                }
+                else{
+                    console.log("enter another string ")
+                    document.getElementById('demo').innerHTML=`enter another string `
+                }
+            }
+            else
+            {
+                // console.log("its is int",typeof(no))
+                //consider as number
+
+                if(no == 7)
+                {
+                    var audio = new Audio('music.mp3');
+                    audio.play();
+
+                    document.getElementsByClassName('for_prints').innerHtml = "thala for reason"
+                    document.getElementById('demo').innerHTML=`THALA FOR REASON => ${no}`
+
+
+                   
+                }
+                else
+                {
+                    var sum = 0
+                    var use = no 
+                    var op = ''
+
+                        while( no!=0 )
+                        {
+                            var re = no % 10 ;
+                            no = Math.floor(no / 10);
+                            // Number(no)
+                            op += re 
+                            op += "+"
+                            sum +=re;
+                            // Number(sum)
+                            console.log("while",no,sum)
+
+                        }
+                        let reversedStr = "";
+                        for (let i = op.length - 1; i >= 0; i--) {
+                            reversedStr += op[i];
+                        }
+                        console.log(reversedStr)
+                        op = reversedStr.slice(1)
+
+                        op += ' = ' + 7
+                        
+
+                        
+                        console.log(sum);
+                        if(sum == 7)
+                        {
+                            
+                            document.getElementById('demo').innerHTML=`THALA FOR REASON => ${op}`
+                            var audio = new Audio('music.mp3');
+                            audio.play();
+                        }
+                        else
+                        {
+                            document.getElementById('demo').innerHTML=`oops!! it is not...!`
+                        }
+                }
+
+
+
+            }
+            
+            
+
+
+            
+
+
+
+
+        }
+        function clears()
+        {
+            var inputs = document.getElementById('input').disabled=false;
+            inputs.disabled="false";
+            document.getElementById('demo').innerHTML=`Try Another `
+
+           
+        }
+        
+        
+    </script>
+
+
+</body>
+</html>
